@@ -1,0 +1,145 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="LineEdit" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 10.0528
+margin_top = 9.4939
+margin_right = 201.053
+margin_bottom = 39.4939
+text = "ws://127.0.0.1:5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_connect" type="Button" parent="."]
+margin_left = 208.409
+margin_top = 10.1472
+margin_right = 308.409
+margin_bottom = 39.1472
+text = "connect"
+
+[node name="btn_ping" type="Button" parent="."]
+visible = false
+margin_left = 30.0
+margin_top = 156.0
+margin_right = 139.0
+margin_bottom = 184.0
+text = "ping"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 7.12128
+margin_top = 63.1177
+margin_right = 161.121
+margin_bottom = 81.1177
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_packet" type="Button" parent="."]
+visible = false
+margin_left = 174.0
+margin_top = 155.0
+margin_right = 283.0
+margin_bottom = 183.0
+text = "Packet"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 2.0
+margin_top = 115.0
+margin_right = 317.0
+margin_bottom = 155.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opt1" type="CheckBox" parent="HBoxContainer"]
+margin_left = 25.0
+margin_right = 89.0
+margin_bottom = 40.0
+text = "Opt 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opt2" type="CheckBox" parent="HBoxContainer"]
+margin_left = 93.0
+margin_right = 157.0
+margin_bottom = 40.0
+text = "Opt 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opt3" type="CheckBox" parent="HBoxContainer"]
+margin_left = 161.0
+margin_right = 221.0
+margin_bottom = 40.0
+text = "Opt3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opt4" type="CheckBox" parent="HBoxContainer"]
+margin_left = 225.0
+margin_right = 289.0
+margin_bottom = 40.0
+text = "Opt 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_left = 2.0
+margin_top = 115.0
+margin_right = 317.0
+margin_bottom = 126.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opt1" type="ColorRect" parent="HBoxContainer2"]
+margin_left = 31.0
+margin_right = 91.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 60, 10 )
+color = Color( 0.298039, 0.298039, 0.298039, 1 )
+
+[node name="Opt2" type="ColorRect" parent="HBoxContainer2"]
+margin_left = 95.0
+margin_right = 155.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 60, 10 )
+color = Color( 0.298039, 0.298039, 0.298039, 1 )
+
+[node name="Opt3" type="ColorRect" parent="HBoxContainer2"]
+margin_left = 159.0
+margin_right = 219.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 60, 10 )
+color = Color( 0.298039, 0.298039, 0.298039, 1 )
+
+[node name="Opt4" type="ColorRect" parent="HBoxContainer2"]
+margin_left = 223.0
+margin_right = 283.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 60, 10 )
+color = Color( 0.298039, 0.298039, 0.298039, 1 )
+[connection signal="pressed" from="btn_connect" to="." method="_on_btn_connect_pressed"]
+[connection signal="pressed" from="btn_ping" to="." method="_on_btn_ping_pressed"]
+[connection signal="pressed" from="btn_packet" to="." method="_on_btn_packet_pressed"]

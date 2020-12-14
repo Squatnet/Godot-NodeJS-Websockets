@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/TileMaps/Objects.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.png" type="Texture" id=2]
+[ext_resource path="res://test/Player.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 30.4596
+
+[node name="TileTest" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 256, 128 )
+collision_layer = 0
+format = 1
+tile_data = PoolIntArray( -327681, 11, 0, -393214, 1, 0, -262145, 11, 0, -327678, 1, 0, -196610, 11, 0, -262144, 1, 0, -262142, 1, 0, -262139, 1, 0, -131075, 1, 0, -196608, 1, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -65537, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -65536, 1, 0, -65535, 8, 0, -65534, 1, 0, -65533, 8, 0, 1, 1, 0, 2, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+pause_mode = 1
+collision_layer = 2
+collision_mask = 13
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( -1.85034, -1.62259 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="Position2D" type="Position2D" parent="Player"]
+position = Vector2( 29.4293, 23.2607 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 2, 2 )
+smoothing_enabled = true
+drag_margin_left = 0.4
+drag_margin_top = 0.4
+drag_margin_right = 0.4
+drag_margin_bottom = 0.4

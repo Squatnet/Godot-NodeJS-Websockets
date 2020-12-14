@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/ChatLine.gd" type="Script" id=1]
+
+[node name="ChatLine" type="Control"]
+margin_right = 320.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 318, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 318.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "NEW TEXT"
+align = 2
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
