@@ -1,6 +1,10 @@
 # Godot HTML5 > NodeJS Websocket + Express
 Example of combining a nodejs server serving HTML5 Godot client via express, using websockets.
-This is a prrof of concept showing you can use Godot engine to create functional HTML5 client served by NodeJS server using express to serve files and Websockets to communicate basic info
+This is a proof of concept showing you can use Godot engine to create functional HTML5 client served by NodeJS server using express to serve files and Websockets to communicate basic info
+
+## UPDATE 15/10/24
+I'm no longer actively developing this, and it was created purely as a proof of concept for Godot 3.5 i was making with a javascript backend. 
+It will not be updated to 4.0 as the way websockets and tilemaps work in 4.0+ is totally different and i havent explored it very much. 
 
 ## Quick Start ## 
 
